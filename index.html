@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Пример страницы: текст, картинка и ссылка</title>
+  <style>
+    :root { --max: 760px; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; line-height: 1.6; margin: 0; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 24px; }
+    header, footer { background: #f5f5f7; }
+    header .container, footer .container { padding: 16px 24px; }
+    img { max-width: 100%; height: auto; display: block; border-radius: 8px; }
+    figure { margin: 1rem 0; }
+    figcaption { font-size: .9rem; opacity: .8; }
+    a { text-decoration: underline; }
+    a:hover { text-decoration-thickness: 2px; }
+    code { background: #f0f0f0; padding: .2em .4em; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <!-- Шапка страницы -->
+  <header>
+    <div class="container">
+      <h1>Моя первая веб‑страница</h1>
+      <p>Этот пример показывает <strong>текст</strong>, <em>изображение</em> и <a href="#link-example">гиперссылку</a>.</p>
+    </div>
+  </header>
+
+  <!-- Основное содержимое -->
+  <main class="container">
+    <h2 id="about">Что здесь есть</h2>
+    <p>Абзац текста. Теги <code>&lt;h1&gt;–&lt;h6&gt;</code> создают заголовки, <code>&lt;p&gt;</code> — абзацы, 
+       <code>&lt;strong&gt;</code> — важное (полужирное), <code>&lt;em&gt;</code> — эмфазу (курсив).</p>
+
+    <!-- Блок с изображением -->
+    <figure>
+      <!-- Поместите файл images/photo.jpg рядом со страницей. Можно заменить на свою картинку. -->
+      <img src="images/photo.jpg" alt="Описание изображения: закат над морем" title="Подсказка при наведении">
+      <figcaption>Рис. 1. Изображение с альтернативным текстом и подписью.</figcaption>
+    </figure>
+
+    <!-- Пример гиперссылки -->
+    <p id="link-example">
+      Перейти на статью о <a href="https://ru.wikipedia.org/wiki/HTML" target="_blank" rel="noopener noreferrer" title="Откроется в новой вкладке">HTML</a>.
+      Атрибуты:
+      <code>href</code> — адрес, <code>target="_blank"</code> — открыть в новой вкладке,
+      <code>rel="noopener noreferrer"</code> — безопаснее для внешних ссылок.
+    </p>
+
+    <!-- Пример внутренней ссылки (якоря) -->
+    <p>
+      Внутренняя ссылка ведёт к заголовку «Что здесь есть»: 
+      <a href="#about" title="Прокрутить к разделу">к разделу выше</a>.
+    </p>
+  </main>
+
+  <!-- Подвал -->
+  <footer>
+    <div class="container">
+      <small>&copy; 2025 Пример учебной страницы</small>
+    </div>
+  </footer>
+</body>
+</html>
